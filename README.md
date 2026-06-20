@@ -356,4 +356,4 @@ Capstone_Project/
 
 # 13. Conclusion
 
-This project successfully demonstrates an end-to-end Data Engineering pipeline using Databricks, Spark, Airflow, Great Expectations, Grafana, and Tableau. The solution implements Medallion Architecture (Bronze-Silver-Gold), automated orchestration, data quality validation, governance controls, and business reporting capabilities suitable for production-grade analytics workloads.
+This project successfully demonstrates an end-to-end Data Engineering pipeline using Databricks, Spark, Airflow, Grafana, and Tableau. The solution implements Medallion Architecture (Bronze-Silver-Gold), automated orchestration, data quality validation, governance controls, and business reporting capabilities suitable for production-grade analytics workloads.
