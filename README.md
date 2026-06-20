@@ -345,6 +345,8 @@ Dashboards
 ├── docker-compose.yml                               # Container configuration for local development
 └── env.txt                                          # Environment and configuration variables
 
+```
+
 ---
 
 # 13. Conclusion
