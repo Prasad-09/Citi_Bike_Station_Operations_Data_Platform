@@ -298,13 +298,6 @@ Dashboards
 * Trips by Day
 * Trips by Station
 
-### Pipeline Metrics
-
-* Pipeline Success Rate
-* Processing Time
-* Failed Records
-* Airflow DAG Status
-
 ---
 
 # 11. Performance & Reliability Report
