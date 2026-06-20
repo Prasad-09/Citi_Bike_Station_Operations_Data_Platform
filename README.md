@@ -309,8 +309,6 @@ Gold
 Dashboards
 ```
 
----------------------------------------------------------------------------------------------------------------------------------
-
 ## Access Control Assumptions
 
 | Role          | Access          |
@@ -325,7 +323,7 @@ Dashboards
 * No customer-sensitive data present.
 * Public transportation dataset.
 
----------------------------------------------------------------------------------------------------------------------------------
+---
 
 # 10. Grafana Dashboard
 
@@ -344,7 +342,7 @@ Dashboards
 * Failed Records
 * Airflow DAG Status
 
----------------------------------------------------------------------------------------------------------------------------------
+---
 
 # 11. Performance & Reliability Report
 
@@ -365,13 +363,14 @@ Dashboards
 * Layered architecture
 * Monitoring and alerting
 
----------------------------------------------------------------------------------------------------------------------------------
+---
 
 # 12. Repository Structure
 
+```text
 Capstone_Project/
 │
-├── airflow/dags/
+├── dags/
 │   └── citibike_pipeline.py
 │
 ├── notebooks/
@@ -395,8 +394,9 @@ Capstone_Project/
 │   └── quality_report
 │
 └── README.md
+```
 
----------------------------------------------------------------------------------------------------------------------------------
+---
 
 # 13. Conclusion
 
