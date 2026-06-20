@@ -370,7 +370,7 @@ Dashboards
 ```text
 Capstone_Project/
 │
-├── dags/
+├── airflow/dags/
 │   └── citibike_pipeline.py
 │
 ├── notebooks/
