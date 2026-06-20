@@ -53,26 +53,26 @@ The objective of this project is to design and implement an end-to-end Data Engi
 | Business Ready Data   |
 +-----------+-----------+
             |
-            +------------------+
-            |                  |
-            v                  v
-+----------------+    +----------------+
-| Tableau        |    | Grafana        |
-| Dashboard      |    | Monitoring     |
-+----------------+    +----------------+
-
+            v
++------------------------------+
+| Table created as gold_rides  |
+| in databricks                |
++-----------+------------------+
+            |
+            v
+            +-----------------------------------+------------------+
+            |                                   |                  |
+            v                                   v                  v
++------------------------------+       +----------------+    +----------------+
+| download the file in local   |       | Tableau        |    | Grafana        |
+| or upload in AWS bucket      |       | Dashboard      |    | Monitoring     |
++-----------+------------------+       +----------------+    +----------------+
             ^
             |
 +-----------------------+
 | Airflow Orchestration |
 +-----------------------+
 
-            ^
-            |
-+-----------------------+
-| Great Expectations    |
-| Data Quality Checks   |
-+-----------------------+
 ```
 
 ---
@@ -227,7 +227,7 @@ export_gold
     ↓
 prepare_download_file
     ↓
-download_gold_csv
+download_gold_csv or upload in AWS bucket
 ```
 
 ### Responsibilities
@@ -241,48 +241,11 @@ DAG File:
 
 ```text
 citibike_pipeline.py
+citibike_pipline_aws.py
 ```
 
----
 
-# 8. Data Quality Report
-
-### Validation Framework
-
-Great Expectations
-
-### Validation Rules
-
-| Rule                | Description              |
-| ------------------- | ------------------------ |
-| Not Null            | ride_id                  |
-| Not Null            | started_at               |
-| Not Null            | ended_at                 |
-| Positive Duration   | ride duration > 0        |
-| Unique Ride ID      | No duplicates            |
-| Valid Coordinates   | Latitude/Longitude range |
-| Valid Station Names | Non-empty values         |
-
-### Failed Record Handling
-
-Invalid records are:
-
-* Logged
-* Stored separately
-* Excluded from Silver layer
-
-### Quality Metrics
-
-| Metric           | Result |
-| ---------------- | ------ |
-| Total Records    | XXXXX  |
-| Valid Records    | XXXXX  |
-| Rejected Records | XXXXX  |
-| Quality Score    | XX%    |
-
----
-
-# 9. Governance Documentation
+# 8. Governance Documentation
 
 ## Data Dictionary
 
