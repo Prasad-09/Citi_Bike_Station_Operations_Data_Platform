@@ -324,33 +324,26 @@ Dashboards
 # 12. Repository Structure
 
 ```text
-Capstone_Project/
-│
-├── airflow/dags/
-│   └── citibike_pipeline.py
-│
-├── notebooks/
-│   ├── 01_Data_Profiling
-│   ├── 02_Bronze_Load
-│   ├── 03_Silver_Transform
-│   ├── 04_Gold_Rides
-│   └── 05_Export_Gold_Rides
-│
-├── data/
-│   ├── raw/
-│   └── output/
-│
-├── dashboards/
-│   ├── tableau/
-│   └── grafana/
-│
-├── docs/
-│   ├── architecture
-│   ├── governance
-│   └── quality_report
-│
-└── README.md
-```
+
+├── Dashboard/                                       # Dashboard configurations and shortcut links
+│   └── Dashboard Links
+│       ├── Grafana Dashbaord                     
+│       └── Tableau Dashboard
+├── airflow/                                         # Airflow orchestration files
+│   └── dags/                                        # Data pipelines and DAG definitions
+│       ├── citibike_pipeline.py
+│       └── citibike_pipeline_aws.py
+├── citibike/                                        # Core project workflows
+│   └── notebooks/                                   # Jupyter Notebooks for ETL stages (Medallion Architecture)
+│       ├── 01_Data_Profiling.ipynb
+│       ├── 02_Bronze_Load.ipynb
+│       ├── 03_Silver_Transform.ipynb
+│       ├── 04_gold_rides.ipynb
+│       ├── 05_Export_Gold_Rides.ipynb
+│       └── 06_Prepare_Download_File.ipynb
+├── README.md                                        # Project documentation
+├── docker-compose.yml                               # Container configuration for local development
+└── env.txt                                          # Environment and configuration variables
 
 ---
 
