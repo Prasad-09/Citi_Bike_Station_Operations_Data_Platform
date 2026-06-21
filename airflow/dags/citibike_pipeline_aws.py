@@ -13,7 +13,7 @@ import boto3
 
 # Databricks Config
 DATABRICKS_HOST = "https://dbc-0237b708-5197.cloud.databricks.com"
-DATABRICKS_TOKEN = "dapif0bd33165a47d93c4775631acaafc0f1"
+DATABRICKS_TOKEN = "dapifXXXXXXXXXXXXXXXXXXXXXXXXXXX1"
 
 BRONZE_JOB_ID = 797820579539048
 SILVER_JOB_ID = 859024956695062
@@ -25,8 +25,8 @@ LOCAL_RAW_FOLDER = "/opt/airflow/data/raw"
 DBFS_RAW_FOLDER = "/Volumes/citibike/default/layers/raw_files/"
 
 # Amazon S3 Config 
-AWS_ACCESS_KEY_ID = "AKIAROZSXIAPXAYVOZGY"
-AWS_SECRET_ACCESS_KEY = "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"
+AWS_ACCESS_KEY_ID = "AKIARXXXXXXXXXXXXXXY"
+AWS_SECRET_ACCESS_KEY = "deCXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
 AWS_REGION = "ap-south-1" 
 S3_BUCKET_NAME = "citibikeprojecthv"
 S3_TARGET_KEY = "gold_rides/gold_rides.csv" 
